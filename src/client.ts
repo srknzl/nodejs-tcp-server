@@ -22,6 +22,6 @@ socket.on('end', () => {
     console.log('Connection closed by server.');
 });
 
-socket.on('close', had_error => {
+socket.on('close', () => {
     console.log('Socket closed.');
 });
