@@ -1,0 +1,15 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "es2017": true,
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "quotes": ["warn", "single"],
+    "max-len": ["warn", 120],
+    "no-multiple-empty-lines": "warn",
+    "no-multi-spaces": "warn",
+    "semi": "warn"
+  }
+}
