@@ -1,4 +1,4 @@
-# Node.js tcp server-client playground
+# Node.js simple tcp server-client
 
 * Simple tcp socket server with a simple protocol.
 
