@@ -6,15 +6,15 @@ const server = new Server((socket: Socket) => {
 });
 
 const writeHelp = (socket: Socket): void => {
-    socket.write(
-        'Usage: \n' +
-        '  1. "+" command. Sums the arguments given after "+". Arguments can be float and comma separated. \n' +
-        '    Example: +1,2 and +-13.23,1253.2 \n' +
-        '  2. "*" command. Multiplies the arguments given after "*"\n' +
-        '    Example: *1,0 and *-13.23,1253.2\n' +
-        '  3. "close" command. Shutdowns the server\n' +
-        '  4. "help" command. Prints this help\n'
-    );
+    socket.write(`
+        Usage:
+          1. "+" command. Sums the arguments given after "+". Arguments can be float and comma separated.
+            Example: +1,2 and +-13.23,1253.2
+          2. "*" command. Multiplies the arguments given after "*"
+            Example: *1,0 and *-13.23,1253.2
+          3. "close" command. Shutdowns the server
+          4. "help" command. Prints this help
+    `);
 };
 
 const PORT = 3000;
@@ -42,7 +42,7 @@ server.on('connection', socket => {
                 socket.write(arithmeticResult.error);
             }
         } else if (!message.trim()) {
-            socket.write('Not interesting.\n');
+            socket.write('Empty...\n');
         } else if (message.trim() === 'help') {
             writeHelp(socket);
         } else {
