@@ -1,5 +1,5 @@
 interface ArithmeticResult {
-    error: string;
+    error: string | null;
     result: number;
 }
 
