@@ -4,7 +4,8 @@
     "target": "es5",
     "sourceMap": true,
     "outDir": "dist",
-    "sourceRoot": "src"
+    "sourceRoot": "src",
+    "strict": true,
   },
   "exclude": [
     "node_modules"
